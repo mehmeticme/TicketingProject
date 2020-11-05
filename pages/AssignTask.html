@@ -140,7 +140,7 @@
                             <div id="userCreateLink" class="collapse submenu" style="">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">User Create</a>
+                                        <a class="nav-link" href="UserCreate.html">User Create</a>
                                     </li>
                                 </ul>
                             </div>
@@ -233,69 +233,42 @@
             <div class="container-fluid dashboard-content">
 
                 <div class="admin-widget">
-                    <h2>User Create</h2>
+                    <h2>Project Create</h2>
                     <div class="row">
                         <form class="col-6">
-                            <div class="row" >
 
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label for="firstName">First Name</label>
-                                        <input type="text" class="form-control mb-2" id="firstName"
-                                               placeholder="enter your first name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">Email address</label>
-                                        <input type="email" class="form-control mb-2" id="email" placeholder="enter your email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <input type="password" class="form-control mb-2" id="password"
-                                               placeholder="enter your password">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="genderOptions">Gender</label>
-                                        <div id="genderOptions">
-                                            <label class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" name="gender" class="custom-control-input">
-                                                <span class="custom-control-label">Male</span>
-                                            </label>
-                                            <label class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" name="gender" class="custom-control-input">
-                                                <span class="custom-control-label">Female</span>
-                                            </label>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label for="lastName">Last Name</label>
-                                        <input type="text" class="form-control mb-2" id="lastName" placeholder="enter your last name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="mobileNumber">Mobile Number</label>
-                                        <input type="text" class="form-control phone-inputmask" id="mobileNumber"  placeholder="(___) ___-____" im-insert="true">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="passwordConfirm">Password Confirmation</label>
-                                        <input type="password" class="form-control mb-2" id="passwordConfirm"
-                                               placeholder="re-enter your password">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="role">Role</label>
-                                        <select class="custom-select" id="role" required>
-                                            <option hidden disabled selected>Select Your Role</option>
-                                            <option>Admin</option>
-                                            <option>Manager</option>
-                                            <option>Employee</option>
-                                        </select>
-
-                                    </div>
-                                </div>
+                            <div class="form-group">
+                                <label for="project">Project</label>
+                                <select class="custom-select" id="project" required>
+                                    <option hidden disabled selected>Select</option>
+                                    <option>Admin</option>
+                                    <option>Manager</option>
+                                    <option>Employee</option>
+                                </select>
 
                             </div>
+                            <div class="form-group">
+                                <label for="projectCode">ProjectCode</label>
+                                <select class="custom-select" id="projectCode" required>
+                                    <option hidden disabled selected>Select</option>
+                                    <option>Admin</option>
+                                    <option>Manager</option>
+                                    <option>Employee</option>
+                                </select>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="taskSubject">Task Subject</label>
+                                <input type="text" class="form-control mb-2" id="taskSubject"
+                                       placeholder="enter task subject">
+                            </div>
+                            <div class="form-group">
+                                <label for="detail">Project Detail</label>
+                                <br>
+                                <textarea class="col-12" style="height: 90px" id="detail"></textarea>
+                            </div>
+
+
                             <div class="row" style="height: 100px">
                                 <div class="col">
                                     <button style="margin-top: 30px" type="submit" class="btn btn-primary">Save</button>
@@ -306,7 +279,7 @@
 
                     </div>
 
-                    <h2>User List</h2>
+                    <h2>Task List</h2>
                     <div class="row">
 
                         <div class="col">
@@ -315,11 +288,11 @@
                                     <table class="table table-striped">
                                         <thead>
                                         <tr>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">E-Mail(username)</th>
-                                            <th scope="col">Gender</th>
-                                            <th scope="col">Phone</th>
-                                            <th scope="col">Role</th>
+                                            <th scope="col">Project</th>
+                                            <th scope="col">Task Subject</th>
+                                            <th scope="col">Assigned Employee</th>
+                                            <th scope="col">Assigned Date</th>
+                                            <th scope="col">Status</th>
                                             <th scope="col">Action</th>
 
                                         </tr>
@@ -327,14 +300,14 @@
                                         <tbody>
                                         <tr>
 
-                                            <td>Mehmet Icme</td>
-                                            <td>mehmeticme42@gmail.com</td>
-                                            <td>Male</td>
-                                            <td>832-571-4888</td>
-                                            <td>Admin</td>
+                                            <td>PRJ001- Human Resoruce CRM</td>
+                                            <td>DataBase Connection</td>
+                                            <td>Someone</td>
+                                            <td>11.03.2020 18:12</td>
+                                            <td>In Progress</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning">Update</a>
-                                                <a href="#" class="btn btn btn-danger">Delete</a>
+                                                <a href="#" class="btn btn-warning active">Update</a>
+                                                <a href="#" class="btn btn btn-danger active">Delete</a>
                                             </td>
                                         </tr>
 
@@ -346,12 +319,7 @@
                     </div>
 
 
-
-
                 </div>
-
-
-
 
 
             </div>
